@@ -1,3 +1,5 @@
+// AccountScreen.js
+
 import React, { useContext } from 'react';
 import {
   View,
@@ -16,14 +18,14 @@ const AccountScreen = ({ navigation }) => {
   // Use the context
   const [state, setState, setDriverStatus] = useContext(AuthContext);
   const { user, isDriver } = state;
-  console.log("User from context:", user);
+  console.log('User from context:', user);
 
   return (
     <ScrollView style={styles.container}>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="light-content" />
       {/* Header */}
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Account</Text>
+        <Text style={styles.headerTitle}></Text>
       </View>
 
       {/* Profile Section */}
@@ -32,7 +34,7 @@ const AccountScreen = ({ navigation }) => {
           source={require('../assets/icon-1633249_1280.png')} // Replace with your profile image
           style={styles.profileImage}
         />
-        <Text style={styles.userName}>{user ? user.name : "John Doe"}</Text>
+        <Text style={styles.userName}>{user ? user.name : 'John Doe'}</Text>
         <TouchableOpacity
           style={styles.editProfileButton}
           onPress={() => navigation.navigate('EditProfile')}
@@ -47,28 +49,28 @@ const AccountScreen = ({ navigation }) => {
           style={styles.menuItem}
           onPress={() => navigation.navigate('RideHistory')}
         >
-          <Icon name="history" size={25} color="#000" />
+          <Icon name="history" size={25} color="#fff" />
           <Text style={styles.menuItemText}>Ride History</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.menuItem}
           onPress={() => navigation.navigate('PaymentMethods')}
         >
-          <Icon name="payment" size={25} color="#000" />
+          <Icon name="payment" size={25} color="#fff" />
           <Text style={styles.menuItemText}>Payment Methods</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.menuItem}
           onPress={() => navigation.navigate('DriverConfiguration')}
         >
-          <Icon name="drive-eta" size={25} color="#000" />
+          <Icon name="drive-eta" size={25} color="#fff" />
           <Text style={styles.menuItemText}>Driver Configuration</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.menuItem}
           onPress={() => navigation.navigate('Settings')}
         >
-          <Icon name="settings" size={25} color="#000" />
+          <Icon name="settings" size={25} color="#fff" />
           <Text style={styles.menuItemText}>Settings</Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -77,18 +79,21 @@ const AccountScreen = ({ navigation }) => {
             if (isDriver) {
               navigation.navigate('DriverDashboard');
             } else {
-              Alert.alert('Not a Driver', 'You are not registered as a RideZap driver.');
+              Alert.alert(
+                'Not a Driver',
+                'You are not registered as a RideZap driver.'
+              );
             }
           }}
         >
-          <Icon name="dashboard" size={25} color="#000" />
+          <Icon name="dashboard" size={25} color="#fff" />
           <Text style={styles.menuItemText}>Driver Dashboard</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.menuItem}
           onPress={() => navigation.navigate('Support')}
         >
-          <Icon name="support-agent" size={25} color="#000" />
+          <Icon name="support-agent" size={25} color="#fff" />
           <Text style={styles.menuItemText}>Support</Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -102,7 +107,12 @@ const AccountScreen = ({ navigation }) => {
                 {
                   text: 'Logout',
                   onPress: () => {
-                    setState(prevState => ({ ...prevState, user: null, token: '', isDriver: false })); // Resetting user state
+                    setState((prevState) => ({
+                      ...prevState,
+                      user: null,
+                      token: '',
+                      isDriver: false,
+                    })); // Resetting user state
                     navigation.replace('SignIn'); // Redirect to login page
                   },
                 },
@@ -111,7 +121,7 @@ const AccountScreen = ({ navigation }) => {
             );
           }}
         >
-          <Icon name="logout" size={25} color="#000" />
+          <Icon name="logout" size={25} color="#fff" />
           <Text style={styles.menuItemText}>Logout</Text>
         </TouchableOpacity>
       </View>
@@ -122,7 +132,7 @@ const AccountScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000', // Changed background to black
   },
   header: {
     backgroundColor: '#000',
@@ -148,19 +158,22 @@ const styles = StyleSheet.create({
     backgroundColor: '#ccc',
   },
   userName: {
-    fontSize: 22,
-    fontWeight: 'bold',
+    fontSize: 28,
     marginVertical: 10,
+    fontFamily: 'outfit-bold',
+    color: '#fff', // Changed text color to white
   },
   editProfileButton: {
-    backgroundColor: '#000',
+    backgroundColor: 'maroon',
     paddingVertical: 8,
     paddingHorizontal: 20,
     borderRadius: 5,
+    marginTop: 2,
   },
   editProfileText: {
     color: '#fff',
     fontSize: 16,
+    fontFamily: 'Kanit-Medium',
   },
   menuSection: {
     marginTop: 10,
@@ -170,12 +183,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 15,
     paddingHorizontal: 20,
-    borderBottomColor: '#ccc',
+    borderBottomColor: '#333', // Darker divider color
     borderBottomWidth: 1,
   },
   menuItemText: {
     fontSize: 18,
     marginLeft: 20,
+    fontFamily: 'Kanit-Medium',
+    color: '#fff', // Changed text color to white
   },
 });
 

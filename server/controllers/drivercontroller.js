@@ -102,20 +102,27 @@ const getUpcomingRides = async (req, res) => {
   }
 };
 
+// controllers/driverController.js
+
+// controllers/driverController.js
+
 const getRideHistory = async (req, res) => {
   try {
     const rides = await Ride.find({
       driverId: req.user._id,
       status: 'completed',
-    }).sort({ date: -1 });
+    })
+      .sort({ createdAt: -1 })
+      .populate('userId', 'name email');
 
-    // Optionally populate pickup and dropoff addresses
     res.status(200).json({ rides });
   } catch (error) {
     console.error('Error fetching ride history:', error);
     res.status(500).json({ message: 'Failed to fetch ride history', error });
   }
 };
+
+
 
 // controllers/driverController.js
 

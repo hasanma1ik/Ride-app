@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
         color: 'white',
         marginBottom: 20,
         textAlign: 'center',
+        fontFamily: 'BebasNeue-Regular'
     },
     button: {
         backgroundColor: 'black',
@@ -126,6 +127,7 @@ const styles = StyleSheet.create({
     buttonText: {
         color: 'white',
         fontSize: 16,
+        fontFamily: 'Kanit-Medium'
     }
 });
 

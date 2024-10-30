@@ -200,8 +200,11 @@ const acceptRide = async (ride) => {
       </View>
 
       {/* Ride History Section */}
-      <View style={styles.card}>
-        <Text style={styles.cardTitle}>Ride History</Text>
+      <View style={styles.card1}>
+      <Text style={styles.cardTitle}></Text>
+      <TouchableOpacity onPress={() => navigation.navigate('RideHistory')}>
+        <Text style={styles.viewRideHistoryText}>View Ride History</Text>
+      </TouchableOpacity>
         {rideHistory.length > 0 ? (
           <FlatList
             data={rideHistory}
@@ -215,7 +218,7 @@ const acceptRide = async (ride) => {
             )}
           />
         ) : (
-          <Text style={styles.noRidesText}>No ride history available.</Text>
+          <Text style={styles.noRidesText}></Text>
         )}
       </View>
 
@@ -235,6 +238,14 @@ const acceptRide = async (ride) => {
 };
 
 const styles = StyleSheet.create({
+
+  viewRideHistoryText: {
+    color: '#1E90FF',
+    fontSize: 17,
+    marginTop: 4,
+    textAlign: 'center',
+    fontFamily: 'Kanit-Medium'
+  },
   loading: {
     flex: 1,
     justifyContent: 'center',
@@ -249,8 +260,9 @@ const styles = StyleSheet.create({
   headerText: {
     color: '#fff',
     fontSize: 24,
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     marginBottom: 20,
+    fontFamily: 'Kanit-Medium'
   },
   card: {
     backgroundColor: '#1c1c1e',
@@ -258,14 +270,22 @@ const styles = StyleSheet.create({
     padding: 15,
     marginBottom: 20,
   },
+  card1: {
+    backgroundColor: '#1c1c1e',
+    borderRadius: 10,
+    padding: 0,
+    marginBottom: 20,
+  },
+
   cardTitle: {
     color: '#fff',
     fontSize: 18,
     marginBottom: 10,
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
+    fontFamily: 'Kanit-Medium'
   },
   earnings: {
-    color: '#1E90FF',
+    color: '#00FF40',
     fontSize: 34,
     fontWeight: 'bold',
   },
@@ -289,6 +309,8 @@ const styles = StyleSheet.create({
   rideRequestText: {
     color: '#fff',
     fontSize: 14,
+     fontFamily: 'MerriweatherSans-VariableFont_wght'
+    
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -331,6 +353,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     marginLeft: 10,
     fontSize: 16,
+    fontFamily: 'Kanit-Medium'
   },
 });
 

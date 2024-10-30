@@ -1,3 +1,5 @@
+// DriverConfigurationScreen.js
+
 import React, { useContext, useState } from 'react';
 import {
   View,
@@ -8,6 +10,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Alert,
+  StatusBar,
 } from 'react-native';
 import { AuthContext } from '../components/context/authContext';
 import axios from 'axios';
@@ -78,10 +81,9 @@ const DriverConfigurationScreen = ({ navigation }) => {
     }
   };
 
-  
-  
   return (
     <ScrollView style={styles.container}>
+      <StatusBar barStyle="light-content" />
       {/* Header */}
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Driver Configuration</Text>
@@ -89,12 +91,14 @@ const DriverConfigurationScreen = ({ navigation }) => {
 
       {/* Availability */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Availability</Text>
+        <Text style={styles.sectionTitle}></Text>
         <View style={styles.switchRow}>
           <Text style={styles.switchLabel}>Available for Rides</Text>
           <Switch
             value={isAvailable}
             onValueChange={setIsAvailable}
+            thumbColor={isAvailable ? '#1E90FF' : '#f4f3f4'}
+            trackColor={{ false: '#767577', true: '#81b0ff' }}
           />
         </View>
       </View>
@@ -105,18 +109,21 @@ const DriverConfigurationScreen = ({ navigation }) => {
         <TextInput
           style={styles.input}
           placeholder="Make"
+          placeholderTextColor="#888"
           value={vehicleInfo.make}
           onChangeText={(text) => setVehicleInfo({ ...vehicleInfo, make: text })}
         />
         <TextInput
           style={styles.input}
           placeholder="Model"
+          placeholderTextColor="#888"
           value={vehicleInfo.model}
           onChangeText={(text) => setVehicleInfo({ ...vehicleInfo, model: text })}
         />
         <TextInput
           style={styles.input}
           placeholder="Year"
+          placeholderTextColor="#888"
           keyboardType="numeric"
           value={vehicleInfo.year}
           onChangeText={(text) => setVehicleInfo({ ...vehicleInfo, year: text })}
@@ -124,6 +131,7 @@ const DriverConfigurationScreen = ({ navigation }) => {
         <TextInput
           style={styles.input}
           placeholder="License Plate"
+          placeholderTextColor="#888"
           value={vehicleInfo.licensePlate}
           onChangeText={(text) => setVehicleInfo({ ...vehicleInfo, licensePlate: text })}
         />
@@ -140,7 +148,7 @@ const DriverConfigurationScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000', // Dark background
   },
   header: {
     backgroundColor: '#000',
@@ -150,7 +158,8 @@ const styles = StyleSheet.create({
   headerTitle: {
     color: '#fff',
     fontSize: 24,
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
+    fontFamily: 'Kanit-Medium',
   },
   section: {
     paddingHorizontal: 20,
@@ -158,8 +167,10 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: 20,
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     marginBottom: 15,
+    color: '#fff',
+    fontFamily: 'Kanit-Medium',
   },
   switchRow: {
     flexDirection: 'row',
@@ -168,16 +179,20 @@ const styles = StyleSheet.create({
   },
   switchLabel: {
     fontSize: 18,
+    color: '#fff',
+    fontFamily: 'Kanit-Medium',
   },
   input: {
-    borderBottomColor: '#ccc',
+    borderBottomColor: '#333',
     borderBottomWidth: 1,
     marginBottom: 15,
     fontSize: 16,
     paddingVertical: 8,
+    color: '#fff',
+    fontFamily: 'Kanit-Medium',
   },
   saveButton: {
-    backgroundColor: '#000',
+    backgroundColor: 'red',
     paddingVertical: 15,
     borderRadius: 5,
     marginHorizontal: 20,
@@ -187,7 +202,8 @@ const styles = StyleSheet.create({
   saveButtonText: {
     color: '#fff',
     fontSize: 18,
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
+    fontFamily: 'Kanit-Medium',
   },
 });
 

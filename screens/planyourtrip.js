@@ -296,6 +296,7 @@ export default function PlanYourTrip() {
                 value={destination}
                 placeholder="Where to?"
                 placeholderTextColor="#999"
+                
               />
             </View>
             {isSelectingDestination && filteredLocations.length > 0 && (
@@ -360,8 +361,9 @@ const styles = StyleSheet.create({
   heading: {
     color: '#fff',
     fontSize: 28,
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     marginBottom: 20,
+    fontFamily: 'Kanit-Medium'
   },
   inputWrapper: {
     zIndex: 1,
@@ -374,6 +376,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     height: 50,
     marginBottom: 10,
+
   },
   icon: {
     marginRight: 10,
@@ -399,6 +402,7 @@ const styles = StyleSheet.create({
   },
   itemText: {
     color: '#fff',
+    
   },
   mapContainer: {
     flex: 1,
@@ -416,15 +420,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
     
+    
   },
   locationTexts: {
     flex: 1,
     marginLeft: 10,
+   
   },
 
   locationLabel: {
     color: '#aaa',
     fontSize: 12,
+     
+    
   },
 
   locationName: {
@@ -470,7 +478,7 @@ const styles = StyleSheet.create({
     
   },
   confirmButton: {
-    backgroundColor: '#fff',
+    backgroundColor: 'red',
     paddingVertical: 15,
     borderRadius: 10,
     alignItems: 'center',
@@ -478,7 +486,7 @@ const styles = StyleSheet.create({
 
   },
   confirmButtonText: {
-    color: '#000',
+    color: '#fff',
     fontSize: 18,
     fontFamily: 'outfit-bold'
   },

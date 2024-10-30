@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     height: 60,
     alignItems: 'center',
     justifyContent: 'space-around',
-    backgroundColor: '#fff',
+    backgroundColor: 'black',
     borderTopColor: '#ddd',
     borderTopWidth: 1,
   },
@@ -75,10 +75,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   activeColor: {
-    color: 'tomato',
+    color: 'red',
   },
   inactiveColor: {
-    color: 'gray',
+    color: 'white',
   },
   labelStyle: {
     fontSize: 12,

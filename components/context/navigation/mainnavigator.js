@@ -5,6 +5,8 @@ import PlanYourTrip from '../../../screens/planyourtrip'
 import DriverConfigurationScreen from '../../../screens/driverconfig';
 import DriverDashboard from '../../../screens/driverdashboard'
 import ActiveRide from '../../../screens/activeride';
+import RideHistory from '../../../screens/ridehistory';
+import RideDetails from '../../../screens/ridedetails';
 
 const Stack = createStackNavigator();
 
@@ -15,6 +17,8 @@ const MainNavigator = () => (
     <Stack.Screen name="DriverConfiguration" component={DriverConfigurationScreen} options={{ headerShown: false }} />
     <Stack.Screen name="DriverDashboard" component={DriverDashboard} options={{ headerShown: false }} />
     <Stack.Screen name="ActiveRide" component={ActiveRide} options={{ headerShown: false }} />
+    <Stack.Screen name="RideHistory" component={RideHistory} options={{ headerShown: false  }}  />
+    <Stack.Screen name="RideDetails" component={RideDetails} options={{ headerShown: false }}/>
     {/* Add other screens that should be accessible when logged in */}
   </Stack.Navigator>
 );

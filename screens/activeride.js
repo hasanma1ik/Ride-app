@@ -1,3 +1,5 @@
+// ActiveRide.js
+
 import React, { useState, useEffect, useContext } from 'react';
 import {
   View,
@@ -25,25 +27,25 @@ const ActiveRide = ({ route, navigation }) => {
     console.log('Ride data in ActiveRide:', ride);
     const fetchData = async () => {
       try {
-        // Get addresses from ride object
         const pickup = ride.pickupLocation.name || 'Unknown Pickup Location';
         const dropoff = ride.dropoffLocation.name || 'Unknown Dropoff Location';
         setPickupAddress(pickup);
         setDropoffAddress(dropoff);
-  
-        // Set passenger name directly from ride.userId
+
         setPassengerName(ride.userId.name || 'Passenger');
-  
-        // Fetch fare if not already calculated
+
         if (!ride.fare) {
-          const fareResponse = await axios.get(`/driver/calculate-fare/${ride._id}`, {
-            headers: { Authorization: `Bearer ${state.token}` },
-          });
+          const fareResponse = await axios.get(
+            `/driver/calculate-fare/${ride._id}`,
+            {
+              headers: { Authorization: `Bearer ${state.token}` },
+            }
+          );
           setFare(fareResponse.data.fare);
         } else {
           setFare(ride.fare);
         }
-  
+
         setLoading(false);
       } catch (error) {
         console.error('Error fetching ride data:', error);
@@ -53,7 +55,6 @@ const ActiveRide = ({ route, navigation }) => {
     };
     fetchData();
   }, []);
-  
 
   const handlePickupPassenger = async () => {
     try {
@@ -74,7 +75,7 @@ const ActiveRide = ({ route, navigation }) => {
 
   const handleDropoffPassenger = async () => {
     try {
-      const response = await axios.post(
+      await axios.post(
         '/driver/complete-ride',
         { rideId: ride._id },
         {
@@ -83,8 +84,6 @@ const ActiveRide = ({ route, navigation }) => {
       );
       setRideStatus('completed');
       Alert.alert('Ride Completed', 'You have completed the ride.');
-  
-      // Update earnings and ride history
       navigation.navigate('DriverDashboard');
     } catch (error) {
       console.error('Error completing ride:', error);
@@ -106,10 +105,19 @@ const ActiveRide = ({ route, navigation }) => {
       <MapView
         style={styles.map}
         initialRegion={{
-          latitude: (ride.pickupLocation.latitude + ride.dropoffLocation.latitude) / 2,
-          longitude: (ride.pickupLocation.longitude + ride.dropoffLocation.longitude) / 2,
-          latitudeDelta: Math.abs(ride.pickupLocation.latitude - ride.dropoffLocation.latitude) * 2,
-          longitudeDelta: Math.abs(ride.pickupLocation.longitude - ride.dropoffLocation.longitude) * 2,
+          latitude:
+            (ride.pickupLocation.latitude + ride.dropoffLocation.latitude) / 2,
+          longitude:
+            (ride.pickupLocation.longitude + ride.dropoffLocation.longitude) /
+            2,
+          latitudeDelta:
+            Math.abs(
+              ride.pickupLocation.latitude - ride.dropoffLocation.latitude
+            ) * 2,
+          longitudeDelta:
+            Math.abs(
+              ride.pickupLocation.longitude - ride.dropoffLocation.longitude
+            ) * 2,
         }}
       >
         <Marker
@@ -118,7 +126,7 @@ const ActiveRide = ({ route, navigation }) => {
             longitude: ride.pickupLocation.longitude,
           }}
           title="Pickup Location"
-          pinColor="green"
+          pinColor="#007AFF"
         />
         <Marker
           coordinate={{
@@ -126,7 +134,7 @@ const ActiveRide = ({ route, navigation }) => {
             longitude: ride.dropoffLocation.longitude,
           }}
           title="Dropoff Location"
-          pinColor="red"
+          pinColor="#34C759"
         />
         <Polyline
           coordinates={[
@@ -146,20 +154,36 @@ const ActiveRide = ({ route, navigation }) => {
 
       {/* Ride Details */}
       <View style={styles.detailsContainer}>
-        <Text style={styles.passengerName}>Passenger: {passengerName}</Text>
-        <Text style={styles.rideDetails}>Ride Type: {ride.rideType}</Text>
-        <Text style={styles.rideDetails}>Pickup: {pickupAddress}</Text>
-        <Text style={styles.rideDetails}>Dropoff: {dropoffAddress}</Text>
-        <Text style={styles.rideDetails}>Payable Amount: PKR {fare}</Text>
+        <Text style={styles.passengerName}>
+          Passenger: {passengerName}
+        </Text>
+        <Text style={styles.rideDetails}>
+          Ride Type: {ride.rideType}
+        </Text>
+        <Text style={styles.rideDetails}>
+          Pickup: {pickupAddress}
+        </Text>
+        <Text style={styles.rideDetails}>
+          Dropoff: {dropoffAddress}
+        </Text>
+        <Text style={styles.rideDetails}>
+          Payable Amount: PKR {fare}
+        </Text>
 
         {/* Action Buttons */}
         {rideStatus === 'accepted' && (
-          <TouchableOpacity style={styles.button} onPress={handlePickupPassenger}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={handlePickupPassenger}
+          >
             <Text style={styles.buttonText}>Pick Up Passenger</Text>
           </TouchableOpacity>
         )}
         {rideStatus === 'in_progress' && (
-          <TouchableOpacity style={styles.button} onPress={handleDropoffPassenger}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={handleDropoffPassenger}
+          >
             <Text style={styles.buttonText}>Drop Off Passenger</Text>
           </TouchableOpacity>
         )}
@@ -171,25 +195,31 @@ const ActiveRide = ({ route, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#000', // Set background to black
   },
   map: {
     flex: 1,
   },
   detailsContainer: {
     padding: 16,
-    backgroundColor: '#fff',
+    backgroundColor: '#000', // Dark mode background
   },
   passengerName: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontFamily: 'Kanit-Medium',
+    color: '#fff', // White text
+    // fontWeight: 'bold',
+    marginBottom: 8,
   },
   rideDetails: {
     fontSize: 16,
+    fontFamily: 'Kanit-Medium',
+    color: '#fff',
     marginVertical: 4,
   },
   button: {
     marginTop: 16,
-    backgroundColor: '#1E90FF',
+    backgroundColor: '#FF3B30', // Red button
     paddingVertical: 12,
     borderRadius: 8,
     alignItems: 'center',
@@ -197,6 +227,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     fontSize: 18,
+    fontFamily: 'Kanit-Medium',
   },
   loading: {
     flex: 1,

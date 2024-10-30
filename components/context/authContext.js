@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
     isDriver: false,
   });
 
-  axios.defaults.baseURL = 'http://192.168.0.102:8080/api/v1';
+  axios.defaults.baseURL = 'http://192.168.99.55:8080/api/v1';
 
   // Load authentication data from AsyncStorage when the app starts
   useEffect(() => {

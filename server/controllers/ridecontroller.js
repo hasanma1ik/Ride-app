@@ -30,4 +30,25 @@ const requestRide = async (req, res) => {
   }
 };
 
-module.exports = { requestRide };
+const getUserRideHistory = async (req, res) => {
+  try {
+    const rides = await Ride.find({
+      userId: req.user._id,
+      status: 'completed',
+    })
+      .sort({ createdAt: -1 })
+      .populate('driverId', 'userId') // Populate driverId to get driver information if needed
+      .populate({
+        path: 'driverId',
+        populate: { path: 'userId', select: 'name email' },
+      });
+
+    res.status(200).json({ rides });
+  } catch (error) {
+    console.error('Error fetching user ride history:', error);
+    res.status(500).json({ message: 'Failed to fetch ride history', error });
+  }
+};
+
+
+module.exports = { requestRide, getUserRideHistory};
