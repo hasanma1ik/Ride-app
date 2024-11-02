@@ -38,8 +38,12 @@ Ride History: Access to a comprehensive ride history allows drivers to keep trac
 
 
 
- <strong>Passenger Feature</strong>
-Ride Options: Users can choose between different ride types:
+ <strong>Passenger Features</strong>
+
+Plan Your Trip: Allows users to schedule rides by selecting both pickup and destination locations. This feature supports a user-friendly search and filter for popular locations, offering a convenient booking experience.
+
+Ride Confirmation Page: After booking, passengers are presented with a map showing their current location and desired destination. Passengers can choose between:
+
 
 RideZap: Affordable everyday rides.
 RideZapX: Premium rides with extra comfort.
@@ -109,27 +113,6 @@ Drop Off Passenger: At the destination, drivers complete the ride, automatically
 Ride History: The Driver Dashboard includes a comprehensive ride history, detailing all completed rides. Each entry shows the ride type, fare amount, and other essential trip information.
 
 Ride Details: Clicking on any ride in the Ride History page provides an in-depth view of that trip, including the date, time, ride type, fare, and pickup and drop-off locations.
-
-<strong>Passenger Features</strong>
-
-Plan Your Trip: Allows users to schedule rides by selecting both pickup and destination locations. This feature supports a user-friendly search and filter for popular locations, offering a convenient booking experience.
-
-Ride Confirmation Page: After booking, passengers are presented with a map showing their current location and desired destination. Passengers can choose between:
-
-RideZap: A standard, affordable ride option.
-RideZapX: A premium option offering added comfort for a higher fare.
-This page also dynamically calculates and displays the fare for each ride option based on distance and ride type.
-Trips Page: Displays a detailed history of the passenger's completed rides, including date, time, pickup and drop-off locations, and fare amount. Each ride is listed with a clear and intuitive layout, allowing passengers to easily review their trip history.
-
-
-
-
-
-
-
-
-
-
 
 
 
