@@ -43,6 +43,8 @@ Ride History: Access to a comprehensive ride history allows drivers to keep trac
 
 
 
+ <img src="https://github.com/user-attachments/assets/fe041a57-3f16-4df9-af21-0d8f5e55c115" width="300"/>
+
 Ride Options: Users can choose between different ride types:
 
 RideZap: Affordable everyday rides.
