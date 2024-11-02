@@ -36,15 +36,9 @@ Ride History: Access to a comprehensive ride history allows drivers to keep trac
  <img src="https://github.com/user-attachments/assets/6c6338b2-ac54-4d59-90de-453c25732989" width="300"/>
  <img src="https://github.com/user-attachments/assets/bbedd5ac-e8ca-4f8c-86a4-ba81683db17b" width="300"/>
 
- <img src="https://github.com/user-attachments/assets/bb909130-2f00-4f6e-afa9-ea84b86719c6" width="300"/>
 
 
- <img src="https://github.com/user-attachments/assets/f193ee56-9d00-497e-97f0-105f4c845934" width="300"/>
-
-
-
- <img src="https://github.com/user-attachments/assets/fe041a57-3f16-4df9-af21-0d8f5e55c115" width="300"/>
-
+ <strong>Passenger Feature</strong>
 Ride Options: Users can choose between different ride types:
 
 RideZap: Affordable everyday rides.
@@ -54,6 +48,15 @@ Trip Visualization: Upon booking a ride, users can view the route on an interact
 Ride History Tracking: Users have access to their ride history, which includes detailed information like date, time, fare, pickup and drop-off locations, and a visual route map.
 
 Detailed Ride Information: Users can tap on any past trip to view comprehensive ride details, including the exact route taken on the map.
+
+
+ <img src="https://github.com/user-attachments/assets/bb909130-2f00-4f6e-afa9-ea84b86719c6" width="300"/>
+
+ <img src="https://github.com/user-attachments/assets/f193ee56-9d00-497e-97f0-105f4c845934" width="300"/>
+ 
+ <img src="https://github.com/user-attachments/assets/fe041a57-3f16-4df9-af21-0d8f5e55c115" width="300"/>
+
+
 
 
 
