@@ -16,15 +16,28 @@ Real-time Fare Calculation: The app calculates fares dynamically based on the di
   <img src="https://github.com/user-attachments/assets/c833154f-dcd0-4df1-ad0e-0bca18de3568" width="300"/>
    <img src="https://github.com/user-attachments/assets/cdbbca24-9b6d-43d8-a4b1-4d13e78e3a5f" width="300"/>
 
- <img src="https://github.com/user-attachments/assets/897685b5-970f-4174-96fa-39de8bb42380" width="300"/>
+<strong>Driver Features</strong>
+Driver Registration and Profile Management: Drivers can register on the platform, update their vehicle information, and set their availability status.
 
- <img src="https://github.com/user-attachments/assets/6da3ef60-6308-4e53-ba22-e9dcae99fa42" width="300"/>
+Ride Requests Management: Available drivers receive ride requests and can accept or decline them based on their preference.
+
+Real-time Ride Updates: Drivers can update the status of rides (e.g., start ride, complete ride), which is reflected in real-time to the user.
+
+Earnings Tracking: Drivers can view their total earnings and access their ride history, which includes customer names, ride types, amounts earned, and detailed ride information.
+
+Ride History: Access to a comprehensive ride history allows drivers to keep track of all completed rides and earnings.
+
+  <img src="https://github.com/user-attachments/assets/8f2dd521-f5ea-435f-91bc-1b87b6c0c1a4" width="300"/>
+ <img src="https://github.com/user-attachments/assets/897685b5-970f-4174-96fa-39de8bb42380" width="300"/>
+<img src="https://github.com/user-attachments/assets/6da3ef60-6308-4e53-ba22-e9dcae99fa42" width="300"/>
  <img src="https://github.com/user-attachments/assets/030268f2-41cf-43cc-9db0-70f05897e1ec" width="300"/>
+
+ 
  <img src="https://github.com/user-attachments/assets/6c6338b2-ac54-4d59-90de-453c25732989" width="300"/>
  <img src="https://github.com/user-attachments/assets/bbedd5ac-e8ca-4f8c-86a4-ba81683db17b" width="300"/>
 
  <img src="https://github.com/user-attachments/assets/bb909130-2f00-4f6e-afa9-ea84b86719c6" width="300"/>
- <img src="https://github.com/user-attachments/assets/8f2dd521-f5ea-435f-91bc-1b87b6c0c1a4" width="300"/>
+
 
  <img src="https://github.com/user-attachments/assets/f193ee56-9d00-497e-97f0-105f4c845934" width="300"/>
 
@@ -40,16 +53,7 @@ Ride History Tracking: Users have access to their ride history, which includes d
 
 Detailed Ride Information: Users can tap on any past trip to view comprehensive ride details, including the exact route taken on the map.
 
-Driver Features
-Driver Registration and Profile Management: Drivers can register on the platform, update their vehicle information, and set their availability status.
 
-Ride Requests Management: Available drivers receive ride requests and can accept or decline them based on their preference.
-
-Real-time Ride Updates: Drivers can update the status of rides (e.g., start ride, complete ride), which is reflected in real-time to the user.
-
-Earnings Tracking: Drivers can view their total earnings and access their ride history, which includes customer names, ride types, amounts earned, and detailed ride information.
-
-Ride History: Access to a comprehensive ride history allows drivers to keep track of all completed rides and earnings.
 
 General Features
 Secure Authentication and Authorization: Implemented JWT-based authentication for secure user and driver sessions, ensuring that only authorized individuals can access certain features.
