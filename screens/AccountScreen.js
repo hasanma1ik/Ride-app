@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     color: '#fff', // Changed text color to white
   },
   editProfileButton: {
-    backgroundColor: 'maroon',
+    backgroundColor: 'red',
     paddingVertical: 8,
     paddingHorizontal: 20,
     borderRadius: 5,

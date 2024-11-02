@@ -17,7 +17,7 @@ export const SocketProvider = ({ children }) => {
     const initializeSocket = () => {
       if (token && user && user.id && user.isDriver) {
         console.log('Initializing socket connection');
-        socketInstance = io('http://192.168.99.55:8080', {
+        socketInstance = io('http://192.168.97.33:8080', {
           query: { token },
           transports: ['websocket'],
         });

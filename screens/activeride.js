@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 16,
-    backgroundColor: '#FF3B30', // Red button
+    backgroundColor: 'red', // Red button
     paddingVertical: 12,
     borderRadius: 8,
     alignItems: 'center',
