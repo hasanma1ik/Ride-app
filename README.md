@@ -17,11 +17,17 @@ Real-time Fare Calculation: The app calculates fares dynamically based on the di
    <img src="https://github.com/user-attachments/assets/cdbbca24-9b6d-43d8-a4b1-4d13e78e3a5f" width="300"/>
 
 <strong>Driver Features</strong>
-Driver Registration and Profile Management: Drivers can register on the platform, update their vehicle information, and set their availability status.
 
-Ride Requests Management: Available drivers receive ride requests and can accept or decline them based on their preference.
+Driver Registration and Configuration: Enables users to register as drivers and set up their driver profile, vehicle details, and availability status. Only registered drivers can access the Driver Dashboard.
 
-Real-time Ride Updates: Drivers can update the status of rides (e.g., start ride, complete ride), which is reflected in real-time to the user.
+Driver Dashboard: This central hub for drivers displays key information such as weekly earnings and upcoming rides. Drivers can view and manage ride requests, choosing to either accept or decline them. Upon accepting a ride, drivers are guided to an in-app map for navigation. Throughout the trip, drivers have actionable controls:
+
+Pick Up Passenger: Drivers mark the beginning of the ride.
+Drop Off Passenger: At the destination, drivers complete the ride, automatically adding the ride fare to their weekly earnings.
+Ride History: The Driver Dashboard includes a comprehensive ride history, detailing all completed rides. Each entry shows the ride type, fare amount, and other essential trip information.
+
+Ride Details: Clicking on any ride in the Ride History page provides an in-depth view of that trip, including the date, time, ride type, fare, and pickup and drop-off locations.
+
 
 Earnings Tracking: Drivers can view their total earnings and access their ride history, which includes customer names, ride types, amounts earned, and detailed ride information.
 
@@ -101,18 +107,6 @@ Real-time Driver Tracking: Implement live location sharing of the driver for use
 
 
 Safety Features: Implement an emergency button to share real-time location with trusted contacts.
-
-<strong>Driver Features</strong>
-
-Driver Registration and Configuration: Enables users to register as drivers and set up their driver profile, vehicle details, and availability status. Only registered drivers can access the Driver Dashboard.
-
-Driver Dashboard: This central hub for drivers displays key information such as weekly earnings and upcoming rides. Drivers can view and manage ride requests, choosing to either accept or decline them. Upon accepting a ride, drivers are guided to an in-app map for navigation. Throughout the trip, drivers have actionable controls:
-
-Pick Up Passenger: Drivers mark the beginning of the ride.
-Drop Off Passenger: At the destination, drivers complete the ride, automatically adding the ride fare to their weekly earnings.
-Ride History: The Driver Dashboard includes a comprehensive ride history, detailing all completed rides. Each entry shows the ride type, fare amount, and other essential trip information.
-
-Ride Details: Clicking on any ride in the Ride History page provides an in-depth view of that trip, including the date, time, ride type, fare, and pickup and drop-off locations.
 
 
 
