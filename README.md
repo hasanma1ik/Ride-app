@@ -10,6 +10,8 @@ User Features
 Easy Ride Booking: Users can book rides by selecting their pickup and drop-off locations from a list of popular destinations or by searching for specific addresses.
 
 Real-time Fare Calculation: The app calculates fares dynamically based on the distance between pickup and drop-off locations and the selected ride type (e.g., RideZap or RideZapX).
+
+
  <img src="https://github.com/user-attachments/assets/7a25c633-2514-4d16-82f7-c12e04e3245c" width="300"/>
   <img src="https://github.com/user-attachments/assets/c833154f-dcd0-4df1-ad0e-0bca18de3568" width="300"/>
    <img src="https://github.com/user-attachments/assets/cdbbca24-9b6d-43d8-a4b1-4d13e78e3a5f" width="300"/>
