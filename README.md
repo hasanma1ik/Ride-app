@@ -3,6 +3,7 @@
 
 
 <strong> RideZap - A Comprehensive Ride-Sharing Application </strong>
+
 RideZap is a full-stack ride-sharing application designed to connect passengers with drivers in a seamless and efficient manner. The app offers a robust set of features for both users and drivers, focusing on real-time data handling, intuitive interfaces, and secure transactions.
 
 Features
